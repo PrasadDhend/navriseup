@@ -167,7 +167,10 @@ html, body {
         top: 20px;
         right: 20px;
     }
-    
+
+    .name {
+        font-size: large;
+    }
     .donate-btn {
         display: none;
     }
