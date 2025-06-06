@@ -56,9 +56,14 @@
         <div class="container-nav">
             <div class="navbar-content">
                 <div class="logo">
-                    <a href="index.html"><img src="/images/logo.png" alt="NGO Logo"></a>
+                    <a href="index.html"><img src="images/logo.png" alt="NGO Logo"></a>
                     <div class="name">Navriseup India Care</div>
                 </div>
+
+                <!-- Hamburger icon for mobile -->
+                <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
                 <nav class="site-navigation">
                     <ul>
                         <li><a href="/index.html">Home</a></li>
@@ -199,6 +204,19 @@
 
     <script>
         // Function to scroll to the top of the page
+        // Hamburger toggle functionality
+        const hamburger = document.getElementById('hamburger-btn');
+        const navMenu = document.querySelector('.site-navigation');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('open');
+
+            const icon = hamburger.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }

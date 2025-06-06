@@ -2,6 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior:smooth;
 }
 
 
@@ -31,6 +32,15 @@ html, body {
 .logo img {
     height: 55px; 
     margin-right: 8px;
+}
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
 }
 
 .site-navigation ul {
@@ -150,23 +160,65 @@ html, body {
     font-size: 12px; /* Adjust the size of the arrow */
 }
 
-/* Dropdown mobile adjustments */
 @media (max-width: 1024px) {
+    #hamburger-btn {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .name,
+    .donate-btn {
+        display: none;
+    }
+
+    .logo {
+        justify-content: flex-start;
+        margin-left: 10px;
+    }
+
+    .site-navigation {
+        display: none; /* Hidden by default on mobile */
+        flex-direction: column;
+        width: 100%;
+        background-color: 242424; 
+        color: white;
+    }
+
+    .site-navigation.active {
+        display: flex; /* Show when hamburger is clicked */
+    }
+
     .site-navigation ul li .dropdown-content {
-        position: relative; /* Change to relative for better stacking */
-        width: 100%; /* Full width on mobile */
-        left: 0; /* Reset position */
-        top: 0; /* Align with the parent item */
+        position: relative; 
+        width: 100%; 
+        left: 0; 
+        top: 0; 
     }
 
     .site-navigation ul li .dropdown-content li a {
-        padding: 10px 20px; /* Adjust padding */
-        font-size: 16px; /* Ensure readability */
+        padding: 10px 20px;
+        font-size: 16px; 
+    }
+    
+    .site-navigation ul li {
+        margin: 5px 0; 
     }
 
-    /* Make sure dropdown items align vertically in mobile view */
+    .navbar-content {
+        flex-direction: column;
+        text-align: center;
+        align-items:flex-start;
+    }
+
+    .site-navigation ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
     .site-navigation ul li {
-        margin: 5px 0; /* Adjust the margin for better spacing */
+        margin: 10px 0;
     }
 }
 
@@ -186,33 +238,9 @@ html, body {
         margin-left: 20px; 
     }
 }
-@media (max-width: 1024px) {
-    .main-navbar {
-        position: relative;
-    }
-    .navbar-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .site-navigation ul {
-        flex-direction: column;
-        margin-top: 10px;
-    }
-
-    .site-navigation ul li {
-        margin: 10px 0;
-    }
-
-    .donate-btn {
-        margin-top: 15px;
-    }
-}
 
 @media (max-width: 768px) {
-    .main-navbar {
-        position: relative;
-    }
+
     .top-bar-content {
         flex-direction: column;
         text-align: center;
