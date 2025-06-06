@@ -50,10 +50,17 @@
     <header class="main-navbar">
         <div class="container-nav">
             <div class="navbar-content">
+
                 <div class="logo">
                     <a href="index.html"><img src="images/logo.png" alt="NGO Logo"></a>
                     <div class="name">Navriseup India Care</div>
                 </div>
+
+                <!-- Hamburger icon for mobile -->
+                <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+
                 <nav class="site-navigation">
                     <ul>
                         <li><a href="index.html">Home</a></li>
@@ -1009,32 +1016,47 @@
     <div class="scroll-to-top" onclick="scrollToTop()">
         <button class="scroll-btn"><i class="fas fa-chevron-up"></i></button>
     </div>
-   
-    <script>
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
 
-        // slider
-        const carouselImages = document.querySelector('.carousel-images');
-        let currentIndex = 0;
-        const totalImages = document.querySelectorAll('.carousel-images img').length;
+<script>
+    
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % totalImages;
-            carouselImages.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }, 4000); 
+    // Hamburger toggle functionality
+    const hamburger = document.getElementById('hamburger-btn');
+    const navMenu = document.querySelector('.site-navigation');
 
-        
-        //counter
-        document.addEventListener("DOMContentLoaded", function () {
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('open');
+
+        const icon = hamburger.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+    });
+
+
+    // slider
+    const carouselImages = document.querySelector('.carousel-images');
+    let currentIndex = 0;
+    const totalImages = document.querySelectorAll('.carousel-images img').length;
+
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % totalImages;
+        carouselImages.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }, 4000);
+
+
+    //counter
+    document.addEventListener("DOMContentLoaded", function () {
         const counters = document.querySelectorAll('.achievement');
-        const speed = 2000; 
+        const speed = 2000;
 
         const countUp = (counter) => {
             const target = +counter.getAttribute('data-target');
             const count = +counter.querySelector('.count').innerText;
-            const increment = target / speed * 100; 
+            const increment = target / speed * 100;
 
             if (count < target) {
                 counter.querySelector('.count').innerText = Math.ceil(count + increment);
@@ -1068,35 +1090,35 @@
 
     // Banner
     const donations = [
-    { name: 'Naveen', amount: 5000 },
-    { name: 'Sakshi', amount: 3500 },
-    { name: 'Shweta', amount: 3000 },
-    { name: 'Sarthak', amount: 4000 },
-    { name: 'Raj', amount: 3000 },
-    { name: 'Ravi', amount: 2500 }
-];
+        { name: 'Naveen', amount: 5000 },
+        { name: 'Sakshi', amount: 3500 },
+        { name: 'Shweta', amount: 3000 },
+        { name: 'Sarthak', amount: 4000 },
+        { name: 'Raj', amount: 3000 },
+        { name: 'Ravi', amount: 2500 }
+    ];
 
-function updateBanner() {
-    const bannerContent = document.querySelector('.banner-content');
+    function updateBanner() {
+        const bannerContent = document.querySelector('.banner-content');
 
-    // Clear existing items
-    bannerContent.innerHTML = '';
+        // Clear existing items
+        bannerContent.innerHTML = '';
 
-    // Add new donation announcements
-    donations.forEach(donation => {
-        const bannerItem = document.createElement('span');
-        bannerItem.className = 'banner-item';
-        bannerItem.textContent = `${donation.name} donated Rs.${donation.amount}!`;
-        bannerContent.appendChild(bannerItem);
-    });
-}
+        // Add new donation announcements
+        donations.forEach(donation => {
+            const bannerItem = document.createElement('span');
+            bannerItem.className = 'banner-item';
+            bannerItem.textContent = `${donation.name} donated Rs.${donation.amount}!`;
+            bannerContent.appendChild(bannerItem);
+        });
+    }
 
-// Update banner every 20 seconds with new data
-setInterval(updateBanner, 20000);
+    // Update banner every 20 seconds with new data
+    setInterval(updateBanner, 20000);
 
-// Initial call
-updateBanner();
+    // Initial call
+    updateBanner();
 
-    </script>  
+</script>
 </body>
 </html>
