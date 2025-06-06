@@ -168,11 +168,14 @@ html, body {
         right: 20px;
     }
 
-    .name,
     .donate-btn {
         display: none;
     }
 
+    .name{
+        font-size: large;
+    }
+    
     .logo {
         justify-content: flex-start;
         margin-left: 10px;
