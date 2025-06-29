@@ -5,7 +5,6 @@ html, body {
 }
 /* Causes section */
 .causes-sect {
-    margin-top: 40px;
     display: flex;
     flex-direction: column;
     padding: 40px 20px;
@@ -35,11 +34,11 @@ html, body {
 }
 
 .causes-para {
-    font-size: 1.2rem; 
-    line-height: 1.8; 
+    font-size: 1.2rem;
+    line-height: 1.8;
     width: 50vw;
     max-width: 800px;
-    color: #4d4d4d; 
+    color: #4d4d4d;
     text-align: center;
     animation: fadeIn 1s ease-in-out;
 }
@@ -49,7 +48,7 @@ html, body {
     padding: 20px;
     width: 80vw;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     align-content: center;
 }
@@ -108,6 +107,7 @@ h3 {
     .featured-causes-div {
         grid-template-columns: 1fr;
         width: 90vw;
+        gap: 10px;
     }
 
     .cause-box {
