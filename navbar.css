@@ -119,13 +119,13 @@ html, body {
     font-size: 16px; /* Slightly smaller font */
     padding: 10px;
     color: white; 
-    background-color: #333333;
+    /* background-color: #333333; */
     display: block;
     text-align: left;
 }
 
 .site-navigation ul li .dropdown-content li a:hover {
-    background-color: #444444; /* Change background on hover */
+    /* background-color: #444444; Change background on hover */
     color: #ffdd00;
 }
 
@@ -243,6 +243,10 @@ html, body {
 }
 
 @media (max-width: 768px) {
+
+    .logo{
+        justify-content: center;
+    }
 
     .top-bar-content {
         flex-direction: column;

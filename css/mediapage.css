@@ -29,7 +29,6 @@ html, body {
 .rnews-item{
     width: 47%;
     height: 430px;
-    padding: 5px;
     border-radius: 7px;
     background-color: rgb(248, 248, 248);
     display: flex;
@@ -75,6 +74,7 @@ html, body {
     color: #1a1a1a;
     text-decoration: none;
     margin-bottom: 5px; 
+    padding: 15px;
 }
 .r-heading:hover{
     color: rgb(0, 85, 255);
@@ -85,11 +85,12 @@ html, body {
     color: #666;
     margin-bottom: 5px; 
     line-height: 1.5;
+    padding: 15px;
 }
 .r-channel {
     display: flex;
     align-items: center;
-    padding-top: 10px;
+    padding: 15px;
     border-top: 1px solid #e0e0e0; /* Adds a subtle divider */
 }
 
@@ -201,10 +202,15 @@ html, body {
 @media (max-width: 768px) {
     .news {
         margin: auto;
+        margin-top: 50px;
         width: 95vw;
         padding: 10px;
         justify-content: center;
         align-items: center;
+    }
+
+    .heading{
+        margin-bottom: 50px;
     }
 
     .subnews {
@@ -310,6 +316,7 @@ html, body {
     margin: 50px auto;
     width: 80%;
     text-align: center;
+    margin-top: 100px;
 }
 
 .heading {

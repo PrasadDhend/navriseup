@@ -7,6 +7,7 @@
     align-items: center;
     background-color: white; /* Lighter contrast to distinguish from the form background */
     text-align: center;
+    margin-top: 100px;
 }
 
 .associated .heading {
@@ -35,13 +36,11 @@
 .slider {
     max-width: 80%;
     margin: 0 auto;
-    background-color: #ffffff;
     display: flex;
     overflow: hidden;
     width: 100%;
     position: relative;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .slide-track {
@@ -57,13 +56,51 @@
 .slide img {
     margin: 0 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
     transition: transform 0.3s ease;
 }
 
 .slide img:hover {
     transform: scale(1.05);
 }
+
+/* Modal styles */
+.modal {
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-content {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #000;
+  }
+  
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s;
+  }
+  
+  .close:hover {
+    color: #bbb;
+  }
 
 /* Animation for infinite scroll */
 @keyframes scroll {
@@ -79,19 +116,22 @@
 @media only screen and (max-width: 768px) {
     .associated {
         padding: 20px;
+        margin-top: 0;
     }
 
     .heading {
-        font-size: 22px;
+        font-size: 28px;
     }
 
     .slider {
         width: 100%;
+        max-width: 100%;
     }
 
     .slide img {
         margin: 0 10px;
-        width: 150px;
+        width: auto;
+        height: 150px;
     }
 
     .slide-track {

@@ -9,6 +9,7 @@
     justify-content: center;
     flex-direction: column;
     border-bottom: 2px solid black;
+    margin-top: 100px;
 }
 
 .achievement-heading {
@@ -45,12 +46,14 @@
 @media (max-width: 768px) {
     .achievement-section {
         height: auto; /* Allow height to adjust for mobile */
-        padding: 30px 15px;
+        padding: 50px 15px;
     }
 
     .achievement-heading {
         font-size: 1.8rem; /* Smaller font for heading on mobile */
-        margin-bottom: 20px;
+        /* margin-bottom: 20px; */
+        padding: 0px;
+        margin: 0px 0px 30px 0px;
     }
 
     .achievement {

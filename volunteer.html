@@ -35,40 +35,43 @@
     
     <!-- Lower Navbar -->
     <header class="main-navbar">
-        <div class="container-nav">
-            <div class="navbar-content">
-                
-                <div class="logo">
-                    <a href="index.html"><img src="images/logo.png" alt="NGO Logo"></a>
-                    <div class="name">Navriseup India Care</div>
-                </div>
+      <div class="container-nav">
+        <div class="navbar-content">
+          <div class="logo">
+            <a href="index.html"
+              ><img src="images/logo.png" alt="NGO Logo"
+            /></a>
+            <div class="name">Navriseup India Care</div>
+          </div>
 
-                <!-- Hamburger icon for mobile -->
-                <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
-                    <i class="fas fa-bars"></i>
-                </button>
+          <!-- Hamburger icon for mobile -->
+          <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
+            <i class="fas fa-bars"></i>
+          </button>
 
-                <nav class="site-navigation">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle">About <i class="fas fa-chevron-down"></i></a>
-                            <ul class="dropdown-content">
-                                <li><a href="about.html">About us</a></li>
-                                <li><a href="media.html">Media</a></li>
-                                <li><a href="contact.html">Contact us</a></li>
-                                <li><a href="partner.html">Partners</a></li>
-                            </ul>
-                        </li>                        
-                        <li><a href="causes.html">Causes</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="volunteer.html">Volunteer</a></li>
-                    </ul>
-                </nav>
-                <a class="donate-btn" href="https://rzp.io/l/navriseup">Donate</a>
-            </div>
+          <nav class="site-navigation">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle"
+                  >About <i class="fas fa-chevron-down"></i
+                ></a>
+                <ul class="dropdown-content">
+                  <li><a href="about.html">About us</a></li>
+                  <li><a href="media.html">Media</a></li>
+                  <li><a href="contact.html">Contact us</a></li>
+                  <li><a href="partner.html">Partners</a></li>
+                </ul>
+              </li>
+              <li><a href="causes.html">Causes</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="volunteer.html">Volunteer</a></li>
+            </ul>
+          </nav>
+          <a class="donate-btn" href="https://rzp.io/l/navriseup">Donate</a>
         </div>
+      </div>
     </header>
 
     <!-- Why Volunteer with NavriseUp Section -->
@@ -281,12 +284,19 @@
         <a class="donate-btn" href="https://rzp.io/l/navriseup">Donate</a>
 
     </section>
+
+    <div>
+        <img data-src="/wp-content/themes/cry/images/blog-banner.jpg" class="home-img-separator ls-is-cached lazyloaded"
+            alt="CRY Children" src="./images/blog-banner.jpg">
+    </div>
     
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="about">
-                <h3 class="footer-h3">About Us</h3>
+                    <span class="logo m-le">
+                        <a href="index.html"><img src="images/logo.png" alt="NGO Logo"></a>
+                    </span>
                 <p class="fp">NavRiseup India Care Foundation: Building a brighter future through education, empowerment, and compassion for all.</p>
             </div>
             <div class="contact">
@@ -307,7 +317,8 @@
                     <li><a href="partner.html">Our Partners</a></li>
                 </ul>
             </div>
-            <div class="social-media" id="followus">
+        </div>
+        <div class="social-media" id="followus">
                 <h3 class="footer-h3">Follow Us</h3>
 
                     <a href="https://www.instagram.com/NavRiseupIndiaCareFoundation/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -316,9 +327,8 @@
                     <a href="https://www.linkedin.com/company/navriseup-india-care-foundation/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
                     <a href="https://www.youtube.com/@NavRiseupIndiaCareFoundation/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
             </div>
-        </div>
         <div class="footer-bottom">
-            <p class="fp">Copyright ©2024 All rights reserved | by NAVRISEUP INDIA CARE FOUNDATION | Donations through this platform are tax exempted under 80G</p>
+            <p class="fp">Copyright ©2025 All rights reserved | by NAVRISEUP INDIA CARE FOUNDATION | Donations through this platform are tax exempted under 80G</p>
             <p class="fp"><a href="https://drive.google.com/file/d/1C4Qd2lr5LTGs9tSubih97RvtFNfiRSqh/view" target="_blank">Terms</a> | <a href="https://drive.google.com/file/d/1l-DwJR8dUIEL61cYVVAOmtigHXKpAXmx/view" target="_blank">Privacy</a> | <a href="legalInfo.html">Legal Information</a></p>
         </div>
     </footer>
@@ -337,6 +347,24 @@
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+    </script>
+    <script>
+      // Hamburger toggle functionality
+      const hamburger = document.getElementById("hamburger-btn");
+      const navMenu = document.querySelector(".site-navigation");
+
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        hamburger.classList.toggle("open");
+
+        const icon = hamburger.querySelector("i");
+        icon.classList.toggle("fa-bars");
+        icon.classList.toggle("fa-times");
+      });
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
     </script>
 </body>
 </html>

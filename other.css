@@ -23,7 +23,6 @@
     min-height: 200px;
     border: 1px solid #ddd; 
     border-radius: 8px;
-    padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     box-sizing: border-box;
     background-color: #e6f7ff; 
@@ -33,6 +32,7 @@
     display: flex; 
     flex-direction: column; 
     height: 100%; 
+    padding-bottom: 10px;
 }
 
 .container:nth-child(3n) {
@@ -53,12 +53,13 @@
 .text-box-details {
     margin-left: 10px; 
     flex: 1; 
+    padding: 10px;
 }
 
 .other-img {
     width: 100%;
     height: 200px; /* Set a fixed height for uniformity */
-    border-radius: 8px;
+    border-radius: 8px 0px 0px 0px;
     margin-bottom: 10px;
     object-fit: cover; /* Ensures images cover the area nicely */
 }
@@ -101,10 +102,25 @@
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.m-r{
+    margin-right: 5px;
+}
+.m-t-100{
+    margin-top: 100px;
+}
+.m-b-100{
+    margin-bottom: 100px;
+}
+.other-causes{
+    margin-top: 100px;
+}
+
 .know-more-btn:hover {
     background-color: #007bff; /* Darker on hover */
     color: #fff; /* White text on hover */
 }
+
+
 
 
 /* Responsive Design */
@@ -112,6 +128,9 @@
     .outer {
         flex-direction: column;
         margin-bottom: 20px; /* Space between rows on smaller screens */
+    }
+    .m-t-100{
+        margin-top: 50px;
     }
 
     .container {
@@ -125,10 +144,11 @@
 
     .text-box-details {
         margin-left: 0; 
+        padding:0px 10px;
     }
 
     .other-img {
-        height: 150px;
+        height: 300px;
     }
 }
 
